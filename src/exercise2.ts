@@ -11,7 +11,7 @@ let bankAccount:{
 let myself:{
 	name: string,
 	bankAccount: typeof bankAccount,
-	hobbies: string[]
+	hobbies: string[] //hobbies: Array<string>
 } = { 
 	name: "John", 
 	bankAccount: bankAccount, 
@@ -58,6 +58,21 @@ interface IBankAccount{
 
 let bankAccount2: IBankAccount = {
 	money: 5000,
+	deposit(value: number): void{
+		this.money += value;
+	}
+}
+
+//abstract class
+abstract class ABankAccount{
+	constructor(public money: number){
+
+	}
+	abstract deposit(value: number):void;
+}
+
+let bankAccount3: ABankAccount = {
+	money: 8000,
 	deposit(value: number): void{
 		this.money += value;
 	}
