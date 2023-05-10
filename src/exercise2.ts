@@ -63,6 +63,20 @@ let bankAccount2: IBankAccount = {
 	}
 }
 
+interface IMySelf{
+	name: string;
+	bankAccount: IBankAccount;
+	hobbies: string[]
+}
+
+let myself3: IMySelf = {
+	name: "John",
+	bankAccount: bankAccount2,
+	hobbies: ["Violin", "Cooking"]
+}
+
+
+
 //abstract class
 abstract class ABankAccount{
 	constructor(public money: number){

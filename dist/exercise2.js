@@ -38,3 +38,15 @@ let bankAccount2 = {
         this.money += value;
     }
 };
+//abstract class
+class ABankAccount {
+    constructor(money) {
+        this.money = money;
+    }
+}
+let bankAccount3 = {
+    money: 8000,
+    deposit(value) {
+        this.money += value;
+    }
+};
